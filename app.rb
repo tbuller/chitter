@@ -23,4 +23,12 @@ class Application < Sinatra::Base
     return erb(:home)
   end  
 
+  get '/login' do
+    return erb(:login)
+  end
+  
+  get '/signup' do
+    return erb(:signup)
+  end  
+
 end    
