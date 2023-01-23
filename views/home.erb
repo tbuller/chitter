@@ -1,2 +1,25 @@
-<h1>Welcome to your feed</h1>
-<button>Make a new post</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chitter</title>
+</head>
+<body>
+<h1>Welcome to your home page</h1>
+<h3>Here's what people have been saying</h3>
+
+  <div class="home">
+    <% @posts.each do |post| %>
+      <div>
+        <h3 class="title"><%= post.title %></h3>
+        <p class="content"><%= post.content %></p>
+        <p class="user"><%= post.user_id %></p>
+         <p class="time"><%= post.time %></p>
+      </div>
+    <% end %>  
+  </div>
+
+</body>
+</html>

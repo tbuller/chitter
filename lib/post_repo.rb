@@ -16,7 +16,7 @@ class PostRepo
       post.time = record['time']
       post.user_id = record['user_id'].to_i
 
-      post << posts
+      posts << post
     end  
 
     return posts

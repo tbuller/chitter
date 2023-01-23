@@ -20,6 +20,9 @@ class Application < Sinatra::Base
   end  
 
   get '/home' do
+    post_repo = PostRepo.new
+    posts = post_repo.all
+    @posts = posts
     return erb(:home)
   end  
 
