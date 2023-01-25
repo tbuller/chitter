@@ -54,6 +54,7 @@ class Application < Sinatra::Base
     @post.content = params[:content]
     @post.time = params[:time]
     @post.user_id = params[:user_id]
+    repo.create(@post)
   end  
 
 

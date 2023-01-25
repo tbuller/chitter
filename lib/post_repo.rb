@@ -22,10 +22,10 @@ class PostRepo
     return posts
   end  
 
-  def create(title, content, time, user_id)
+  def create(post)
     sql = 'INSERT INTO posts (title, content, time, user_id) VALUES ($1, $2, $3, $4)'
 
-    params = [title, content, time, user_id]
+    params = [post.title, post.content, post.time, post.user_id]
 
     DatabaseConnection.exec_params(sql, params)
   end  
