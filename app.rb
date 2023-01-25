@@ -32,6 +32,18 @@ class Application < Sinatra::Base
   get '/login' do
     return erb(:login)
   end
+
+  post '/login' do
+    user = User.new
+    user_repo = UserRepo.new
+    user.username = params[:username]
+    user.password = params[:password]
+    if user_repo.all.map { |u| u.username }.include?(user.username)
+      redirect '/home'
+    else
+      redirect '/'
+    end    
+  end  
   
   get '/signup' do
     return erb(:signup)
@@ -61,4 +73,8 @@ class Application < Sinatra::Base
   end  
 
 
-end    
+end  
+
+user_repo = UserRepo.new
+
+print user_repo.all
