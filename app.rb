@@ -23,6 +23,9 @@ class Application < Sinatra::Base
     post_repo = PostRepo.new
     posts = post_repo.all
     @posts = posts
+    user_repo = UserRepo.new
+    users = user_repo.all
+    @users = users
     return erb(:home)
   end  
 
