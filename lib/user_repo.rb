@@ -3,13 +3,13 @@ require_relative './database_connection'
 
 class UserRepo
 
-  def create(username, password)
+  def create(user)
     
     DatabaseConnection.connect('chitter')
 
-    params = [username, password]
+    params = [user.username, user.password]
 
-    DatabaseConnection.exec_params('INSERT INTO users (username, email) VALUES ($1, $2)', params)
+    DatabaseConnection.exec_params('INSERT INTO users (username, password) VALUES ($1, $2)', params)
 
   end  
 
