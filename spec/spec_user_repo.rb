@@ -15,7 +15,18 @@ describe UserRepo do
   it 'lists all users' do
     user_repo = UserRepo.new
     users = user_repo.all
-    expect(users.length).to eq(10)
     expect(users[0].password).to eq('testing123')
+    expect(users[1].username).to eq('Timmy C')
   end  
+
+  it 'creates a user' do
+    user_repo = UserRepo.new
+    user = User.new
+    user.username = 'Thierry Henry'
+    user.password = 'Invincibles999'
+    user_repo.create(user)
+    expect(user_repo.all[-1].username).to eq('Thierry Henry')
+    expect(user_repo.all[-1].password).to eq('Invincibles999')
+  end
+
 end    
