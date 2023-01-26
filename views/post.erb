@@ -8,25 +8,34 @@
   <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-<h1 class="welcome">Make a new post!</h1>  
+<h1 class="welcome">Make a new post!</h1>
+<a href="/home"><button class="return-home">Take me to the home page</button></a>  
 <div>
   <form method="post" action="posts">
     <div class="post-form">
     <div class="input-form">
-      <label for="title">Title of your post</label>
-      <input type="text" name="title" id="title" class="input-field">
+      <label for="title">Title of your post:</label>
+      <div class="input-field">
+      <input type="text" name="title" id="title">
+      </div>
     </div>
     <div class="input-form">
       <label for="content">What's on your mind</label>
-      <input type="text" name="content" id="content">
+      <div>   
+      <input type="text" name="content" id="content" class="content-field">
+      </div>
     </div>
     <div class="input-form">
       <label for="time">At what time are you posting this</label>
-      <input type="text" name="time" id="time" class="input-field">
+      <div class="input-field">
+      <input type="text" name="time" id="time">
+      </div>
     </div>
     <div class="input-form">
       <label for="user_id">Which user are you posting as</label>
-      <input type="text" name="user_id" id="user_id" class="input-field">
+      <div class="input-field">
+      <input type="text" name="user_id" id="user_id">
+      </div>
     </div>
     <div>  
       <input type="submit" value="Post!" class="form-submit">

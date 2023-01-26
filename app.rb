@@ -72,6 +72,7 @@ class Application < Sinatra::Base
     @post.time = params[:time]
     @post.user_id = params[:user_id]
     repo.create(@post)
+    redirect '/home'
   end  
 
 

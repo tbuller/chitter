@@ -51,6 +51,16 @@ button {
   transition: all 0.3s;
 }
 
+.return-home {
+  width: 400px;
+  height: 70px;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+}
+
 button:hover {
   background-color: green;
 }
@@ -74,6 +84,13 @@ button:hover {
   margin-top: 10px;
 }
 
+.user-page-button {
+  width: 240px;
+  height: 70px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
 form {
   font-family: "copperplate";
   font-size: 20px;
@@ -84,11 +101,19 @@ form {
 }
 
 .input-form {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
-.input-field {
-  width: 300px;
+input {
+  padding-top: 0;
+  padding-left: 0;
+  width: 500px;
   height: 25px;
-  left: 85;
+}
+
+.content-field {
+  padding-top: 0;
+  padding-left: 0;
+  width: 500px;
+  height: 100px;
 }
