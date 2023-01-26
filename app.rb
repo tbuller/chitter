@@ -38,7 +38,9 @@ class Application < Sinatra::Base
     user_repo = UserRepo.new
     user.username = params[:username]
     user.password = params[:password]
-    if user_repo.all.map { |u| u.username }.include?(user.username)
+    user_username_index = user_repo.all.find_index { |u| u.username == user.username }
+    if (user_repo.all.map { |u| u.username }.include?(user.username) && user_repo.all.map { |u| u.password }.include?(user.password)) && ((user_repo.all.find_index { |u| u.username == user.username }) == (user_repo.all.find_index { |u| u.password == user.password }))
+      print user_username_index
       redirect '/home'
     else
       redirect '/'
@@ -74,7 +76,3 @@ class Application < Sinatra::Base
 
 
 end  
-
-user_repo = UserRepo.new
-
-print user_repo.all
