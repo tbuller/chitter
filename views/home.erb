@@ -8,15 +8,15 @@
   <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-<h1>Welcome to your home page</h1>
-<h3>Here's what people have been saying</h3>
+<h1 class="welcome">Welcome to your home page</h1>
+<h3 class="prompt">Here's what people have been saying</h3>
 
   <div class="home">
     <% @posts.each do |post| %>
-      <div>
+      <div class="whole-post">
         <h3 class="title"><%= post.title %></h3>
         <p class="content"><%= post.content %></p>
-        <p class="user"><%= @users[(post.user_id) - 1].username %></p>
+        <p class="user">Posted by:<%= @users[(post.user_id) - 1].username %></p>
         <p class="time">Posted at: <%= post.time %></p>
       </div>
     <% end %>  

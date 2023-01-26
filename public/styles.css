@@ -38,3 +38,8 @@ button {
 button:hover {
   background-color: green;
 }
+
+.whole-post {
+  border: 1px solid black;
+  font-family: "copperplate";
+}
