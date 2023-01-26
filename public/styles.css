@@ -1,3 +1,40 @@
+html {
+  text-align: center;
+}
+
 body {
-  background-color: red;
+  background-color: rgb(222, 202, 192);
+}
+
+.welcome {
+  color: rgb(163, 6, 6);
+  font-family: "copperplate";
+  font-size: 60px;
+  padding-bottom: 40px;
+}
+
+.prompt {
+  font-family: "copperplate";
+  font-size: 30px;
+  padding-bottom: 40px;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  border: 4px double #cccc;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  font-family: "copperplate";
+  cursor: pointer;
+  -webkit-transition: all 0.3s; 
+  -moz-transition: all 0.3s; 
+  -o-transition: all 0.3s; 
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: green;
 }
