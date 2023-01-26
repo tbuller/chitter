@@ -9,14 +9,15 @@
 </head>
 <body>
 <h1 class="welcome">Welcome to your home page</h1>
+<a href="/post"><button class="post-page-button">Make a new post!</button></a>
 <h3 class="prompt">Here's what people have been saying</h3>
 
   <div class="home">
-    <% @posts.each do |post| %>
+    <% @posts.reverse.each do |post| %>
       <div class="whole-post">
         <h3 class="title"><%= post.title %></h3>
         <p class="content"><%= post.content %></p>
-        <p class="user">Posted by:<%= @users[(post.user_id) - 1].username %></p>
+        <p class="user">Posted by: <%= @users[(post.user_id) - 1].username %></p>
         <p class="time">Posted at: <%= post.time %></p>
       </div>
     <% end %>  
